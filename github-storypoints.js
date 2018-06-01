@@ -134,9 +134,9 @@
         pointsRegEx.exec(titleElement.innerText) ||
         [null, '0', titleElement.innerText]
       );
-      const storyPoints = parseFloat(story[2]) || 0;
-      const storyTitle = story[3];
-      const spentPoints = parseFloat(story[5]) || 0;
+      const storyPoints = parseFloat(story[5]) || 0;
+      const storyTitle = story[1];
+	  const spentPoints = 0;
       if (storyPoints || spentPoints) {
         titleElement.innerHTML = titleWithPoints(storyTitle, storyPoints, spentPoints);
       }
